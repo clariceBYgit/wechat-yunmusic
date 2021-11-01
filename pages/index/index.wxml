@@ -1,0 +1,80 @@
+<view>
+<!-- 轮播图区 -->
+  <swiper class="indexContainer" indicator-dots indicator-color='ivory' indicator-active-color='#d43c33' autoplay	>
+    <swiper-item class="banners"	>
+     <image src="/static/images/nvsheng.jpg"></image>
+    </swiper-item>
+    <swiper-item class="banners">
+     <image src="/static/images/nvsheng.jpg"></image>
+    </swiper-item>
+    <swiper-item class="banners">
+     <image src="/static/images/nvsheng.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 五个导航栏区域 -->
+  <view class="navContainer">
+    <view class="navItem">
+      <text class="iconfont icon-meirituijian"></text>
+      <text>每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-gedan1"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-icon-ranking"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text>直播</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲区域 -->
+  <view class="recommendContainer">
+    <!-- 头部区域 -->
+    <view class="header">
+      <text class="title">推荐歌曲</text>
+      <view>
+        <text>为你精心推荐</text>
+        <text class="more">查看更多</text>
+      </view>
+    </view>
+  </view>
+  <!-- 内容区域 -->
+  <scroll-view class="recommendScroll" scroll-x	enable-flex> 
+    <view class="scrollItem">
+      <image src="/static/images/nvsheng.jpg"></image>
+      <text>江景大厦放松放松放松沙发上灌水灌水灌水</text>
+    </view>
+    <view  class="scrollItem">
+      <image src="/static/images/nvsheng.jpg"></image>
+      <text>江景大厦放松放松放松沙发上灌水灌水灌水</text>
+    </view>
+    <view  class="scrollItem">
+      <image src="/static/images/nvsheng.jpg"></image>
+      <text>江景大厦放松放松放松沙发上灌水灌水灌水</text>
+    </view>
+    <view  class="scrollItem">
+      <image src="/static/images/nvsheng.jpg"></image>
+      <text>江景大厦放松放松放松沙发上灌水灌水灌水</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvsheng.jpg"></image>
+      <text>江景大厦放松放松放松沙发上灌水灌水灌水</text>
+    </view>
+    <view  class="scrollItem">
+      <image src="/static/images/nvsheng.jpg"></image>
+      <text>江景大厦放松放松放松沙发上灌水灌水灌水</text>
+    </view>
+    <view  class="scrollItem">
+      <image src="/static/images/nvsheng.jpg"></image>
+      <text>江景大厦放松放松放松沙发上灌水灌水灌水</text>
+    </view>
+  
+  </scroll-view>
+</view>

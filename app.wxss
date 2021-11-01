@@ -1,0 +1,7 @@
+/**app.wxss**/
+/* 全局引入iconfont */
+@import "/static/iconfont/iconfont.wxss";
+/* 默认标签高度100% */
+page{
+  height: 100%;
+}

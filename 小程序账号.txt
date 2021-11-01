@@ -1,0 +1,29 @@
+wx22367e18e37d7d5e    appID
+
+14961ffd6e3a3964812269ed805af2cd   appSecret
+
+
+1.flex 布局 
+  https://www.runoob.com/w3cnote/flex-grammar.html
+
+
+2.为什么做viewport适配
+ a) 手机厂商在生产手机的时候大部分手机默认页面宽度为980px
+ b) 手机实际视口宽度都要小于980px	
+ c) 开发需求：需要将980的页面完全显示在手机屏幕 上且没有滚动条
+ 实现:  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+3.小程序适配方案:rpx(responsive pixel 响应室像素单位)
+	1）小程序适配单位：rpx
+	2）规定任何屏幕下宽度为750px
+	3）小程序会根据屏幕的宽度不同自动计算rpx值的大小
+	4）iphone6 下：1rpx=1物理像素=0.5px
+ 
+4.数据绑定
+	1）小程序：data中初始化数据；修改数据 this.setData() 修改数据的行为为同步；数据流 单项 model--view
+	2）vue：data中初始化数据；修改数据 this.key=value;数据流 单项数据流 model--view  vue中实现了双向数据绑定 v-model
+	3）react：state中初始化数据；修改数据this.setState() [a.自身钩子函数中（componentDidMount）异步的 b.非自身的钩子函数中（定时器的回调）同步的];数据流 单项 model--view
+
+5.获取用户信息
+	1）未授权登陆  button open-type="getUserInfo"
+	2）已经获取 信息  wx.getUserInfo()
