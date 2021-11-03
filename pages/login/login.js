@@ -42,7 +42,7 @@ Page({
         this.setData({
             [type]: event.detail.value
         })
-        console.log(this.data)
+        // console.log(this.data)
     },
     // 登录的回调
     async login() {
@@ -82,7 +82,7 @@ Page({
             return;
         }
         // 后端验证
-        let result = await request("/login/cellphone", { phone, password })
+        let result = await request("/login/cellphone", { phone, password ,isLogin:true})
         if (result.code === 200) { //登录成功 
             wx.showToast({
                 title: "登录成功",
