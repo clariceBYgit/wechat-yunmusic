@@ -9,11 +9,36 @@
     </view>
  
     <!-- 导航区域 -->
-    <scroll-view scroll-x enable-flex class="navScroll">
-        <view class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
+    <scroll-view scroll-with-animation scroll-into-view="{{'scroll'+navId}}" scroll-x enable-flex class="navScroll">
+        <view id="{{'scroll'+item.id}}" class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
             <view data-id="{{item.id}}" class="navContent {{item.id===navId? 'active' :''}}" bindtap="navChange" id="{{item.id}}">
                 {{item.name}}   
             </view>
+        </view>
+    </scroll-view>
+    <!--视频列表动态展示 区域-->
+    <scroll-view scroll-y class="videoScroll">
+        <view class="videoItem" wx:for="{{videoList}}" wx:key="id">
+            <video bindplay="handlePlay" id="{{item.data.vid}}" src="{{item.data.urlInfo.url}}"></video>
+            <view class="content">{{item.data.title}}</view>
+
+          <view class="footer">
+            <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+            <text class="nickName">{{item.data.creator.nickname}}</text>
+            <view class="comments_praised">
+              <text class="item">
+                <text class="iconfont icon-buoumaotubiao15"></text>
+                <text class="count">{{item.data.praisedCount}}</text>
+              </text>
+              <text class="item">
+                <text class="iconfont icon-pinglun1"></text>
+                <text class="count">{{item.data.commentCount}}</text>
+              </text>
+              <button open-type="share" class="item btn">
+                <text class="iconfont icon-gengduo"></text>
+              </button>
+            </view>
+          </view>
         </view>
     </scroll-view>
 </view>
