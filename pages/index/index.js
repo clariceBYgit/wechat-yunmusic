@@ -7,19 +7,13 @@ Page({
         bannerList: [], //轮播数据
         recommendList: [], //推荐歌单
         topList: [], //排行榜音乐
-        motto: 'Hello World',
         userInfo: {},
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         canIUseGetUserProfile: false,
         canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
     },
-    // 事件处理函数
-    bindViewTap() {
-        wx.navigateTo({
-            url: '../logs/logs'
-        })
-    },
+
     onLoad: async function() {
         let bannerListData = await request('/banner', { type: 2 });
         // 获取推荐歌单数组

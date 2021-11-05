@@ -19,9 +19,11 @@
     <!--视频列表动态展示 区域-->
     <scroll-view scroll-y class="videoScroll">
         <view class="videoItem" wx:for="{{videoList}}" wx:key="id">
-            <video bindplay="handlePlay" id="{{item.data.vid}}" src="{{item.data.urlInfo.url}}"></video>
+            <video class="common" bindended="handleEnded" bindtimeupdate="handleTimeUpdate" object-fit="cover" wx:if="{{videoId === item.data.vid}}" poster="{{item.data.coverUrl}}" bindplay="handlePlay" id="{{item.data.vid}}" src="{{item.data.urlInfo.url}}"></video>
+            <!-- 性能优化 使用image 标签代替 video标签 -->
+            <image class="common" bindtap="handlePlay" wx:else  id="{{item.data.vid}}" src="{{item.data.coverUrl}}" />
+            
             <view class="content">{{item.data.title}}</view>
-
           <view class="footer">
             <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
             <text class="nickName">{{item.data.creator.nickname}}</text>
