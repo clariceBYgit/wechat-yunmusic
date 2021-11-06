@@ -1331,7 +1331,19 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
-
+    onShareAppMessage: function({from}) {
+        if(from === 'button'){
+            return{
+                title:'来自button的转发',
+                page:'/page/video/video',
+                imageUrl:'/static/images/nvsheng.jpg'
+            }
+        }else{
+            return{
+                title:'来自menu的转发',
+                page:'/page/video/video',
+                imageUrl:'/static/images/nvsheng.jpg'
+            }
+        }
     }
 })
