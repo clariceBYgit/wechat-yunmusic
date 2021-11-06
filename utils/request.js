@@ -35,7 +35,7 @@ export default (url, data = {}, method = 'GET') => {
                 
             },
             success: (res) => {
-                console.log(res);
+                // console.log(res);
                 if(data.isLogin){
                     wx.setStorage({
                         key:'cookies',
