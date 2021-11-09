@@ -1,0 +1,94 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 20rpx;
+}
+/* 摇杆底座 */
+.circle{
+    position: relative;
+    z-index: 100;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    background: #fff;
+    margin: 10rpx 0;
+}
+/* 摇杆 */
+.needle{
+    position: relative;
+    z-index: 99;
+    left: 60rpx;
+    width: 192rpx;
+    height: 274rpx;
+    top: -40rpx;
+    transform-origin: 40rpx 0;
+    transform: rotate(-20deg);
+    transition: transform 1s;
+}
+.palyRotate{
+    transform: rotate(0deg);
+
+}
+/* 磁盘 */
+.discContainer{
+    position: relative;
+    z-index: 1;
+    top: -170rpx;
+    width: 598rpx;
+    height: 598rpx;
+}
+.disc{
+    width: 598rpx;
+    height: 598rpx;
+}
+.musicImg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 370rpx;
+    height: 370rpx;
+    border-radius: 50%;
+
+}
+/* 磁盘动画 */
+.discAnimation{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: disc 4s linear 1s infinite ;
+}
+
+@keyframes disc {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* 播放控件的设置 */
+.musicControl{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    border-top: 1rpx solid #fff;
+    height: 240rpx;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.musicControl text{
+    color: #fff;
+    font-size: 60rpx;
+    line-height: 180rpx;
+}
+.musicControl .big{
+    font-size: 90rpx;
+}

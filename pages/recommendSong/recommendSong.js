@@ -23,7 +23,7 @@ Page({
                 icon:"none",
                 success:()=>{
                     // 跳转至登录页面
-                    wx.reLauch({
+                    wx.reLaunch({
                         url:'/pages/login/login'
                     })
                 }
@@ -45,6 +45,17 @@ Page({
         this.setData({
             recommendList:recommendListData.recommend
         })
+    },
+    // handleMusicDesc 点击跳转至歌曲播放详情 songDetail页面
+    handleMusicDesc(e){
+        let song = e.currentTarget.dataset.song;
+        console.log(song)
+        // 不能直接将song对象作为参数
+        wx.navigateTo({
+            // 不能直接将song对象作为参数传递，长度过长，会被自动截取掉
+            // url: '/pages/songDetail/songDetail?songPackage=' + JSON.stringify(songPackage)
+            url: '/pages/songDetail/songDetail?musicId=' + song.id
+          })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

@@ -70,5 +70,11 @@ Page({
             userInfo: e.detail.userInfo,
             hasUserInfo: true
         })
+    },
+    // 点击前往每日推荐
+    toRecommendSong(){
+        wx.redirectTo({
+            url:'/pages/recommendSong/recommendSong'
+        })
     }
 })
