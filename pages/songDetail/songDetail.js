@@ -1,4 +1,6 @@
 // pages/songDetail/songDetail.js
+
+import PubSub from 'pubsub-js';
 import requset from '../../utils/request';
 // 获取全局实例
 const appInstance = getApp();
@@ -44,6 +46,25 @@ Page({
       handleMusicPlay(){
         let isPlay = !this.data.isPlay;
         this.musicControl(isPlay,this.data.musicId)
+    },
+    // 点击切歌的回调  songDetail相当于（发布方 PubSub.publish(事件名，提供的数据) 发送数据）  至 recommendSong （订阅方 PubSub.subscribe(事件名，事件的回调)）接收数据
+    handleSwitch(e){
+        // 获取切歌的类型
+        let type = e.currentTarget.id;
+        // 订阅来自recommendSong页面发布的musicId消息
+        PubSub.subscribe('musicId',(msg, musicId)=>{
+            console.log(musicId);
+            //获取音乐详情信息
+            this.getMusicInfo(musicId);
+            // 自动播放当前的音乐
+            this.musicControl(true, musicId);
+            // 取消订阅
+            PubSub.unsubscribe('musicId')
+        });
+        // 发布消息数据到recommendSong页面
+        PubSub.publish('switchType',type);
+    
+        
     },
     /**
      * 生命周期函数--监听页面加载

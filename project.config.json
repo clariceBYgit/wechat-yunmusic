@@ -17,7 +17,7 @@
         "minified": true,
         "newFeature": false,
         "coverView": true,
-        "nodeModules": false,
+        "nodeModules": true,
         "autoAudits": false,
         "showShadowRootInWxmlPanel": true,
         "scopeDataCheck": false,
@@ -49,7 +49,7 @@
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
     "appid": "wxa514d9a0a92b543c",
-    "projectname": "云音乐",
+    "projectname": "%E4%BA%91%E9%9F%B3%E4%B9%90",
     "debugOptions": {
         "hidedInDevtools": []
     },
