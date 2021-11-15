@@ -43,8 +43,11 @@ Page({
         PubSub.subscribe('switchType',(msg,type) => {
             let {recommendList, index} = this.data;
             if(type === 'pre'){ //上一首
+               ( index === 0 )&& (index = recommendList.length)
                  index -= 1;
             }else{//下一首
+               ( index === recommendList.length - 1 )&& (index = -1 )
+
                 index += 1;
             }
             // 更新下标
@@ -54,7 +57,6 @@ Page({
             let musicId = recommendList[index].id;
             // 将musicId回传给songDetail页面
             PubSub.publish('musicId',musicId);
-            console.log(musicId)
 
         });
         
