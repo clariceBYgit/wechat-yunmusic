@@ -1,0 +1,5 @@
+/* myTemplate/myTemplate.wxss */
+.title{
+    color: tomato;
+    font-size: 50rpx;
+}

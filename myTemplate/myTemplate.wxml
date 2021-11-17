@@ -1,0 +1,9 @@
+<!--myTemplate/myTemplate.wxml-->
+<template name='myTemplate'>
+    <view>
+        <view class="title">测试模板的使用</view>
+        <view class="userName">用户姓名：{{name}}</view>
+        <view class="userAge">用户年龄：{{age}}</view>
+    </view>
+
+</template>
