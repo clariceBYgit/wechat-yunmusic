@@ -1285,6 +1285,12 @@ Page({
 
 
     },
+    // 点击搜索音乐跳转至搜索页面
+    toSearchPage(){
+        wx.navigateTo({
+          url: '/pages/search/search',
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

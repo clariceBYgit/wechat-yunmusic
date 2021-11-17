@@ -73,7 +73,10 @@ Page({
     },
     // 点击前往每日推荐
     toRecommendSong(){
-        wx.redirectTo({
+        // wx.navigateTo 保留当前页面，跳转到应用内的某个页面。
+        // 但是不能跳到 tabbar 页面。使用 wx.navigateBack 可以返回到原页面。
+        // 小程序中页面栈最多十层
+        wx.navigateTo({
             url:'/pages/recommendSong/recommendSong'
         })
     }
