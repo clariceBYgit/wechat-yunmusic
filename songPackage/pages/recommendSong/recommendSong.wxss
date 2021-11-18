@@ -1,4 +1,7 @@
 /* pages/recommendSong/recommedSong.wxss */
+/* 独立分包不能使用主包的资源 样式 图片等 */
+@import '../../static/iconfont/iconfont.wxss';
+
 .recommendSongContainer .header{
     width: 100%;
     height: 300rpx;

@@ -1,4 +1,9 @@
 /* pages/songDetail/songDetail.wxss */
+/* 独立分包不能使用主包的资源 样式 图片等 */
+@import '../../static/iconfont/iconfont.wxss';
+page{
+    height: 100%;
+}
 .songDetailContainer{
     height: 100%;
     display: flex;

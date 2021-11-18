@@ -1,0 +1,10 @@
+<!--others/others.wxml-->
+<!-- 引入 myTemplate 模板 -->
+<import src="../../../myTemplate/myTemplate"></import>
+<template is='myTemplate' data="{{...userInfo}}"></template>
+<view>*************</view>
+<view>*************</view>
+<view>*************</view>
+
+<view>测试获取用户的唯一标识openId</view>
+<button bindtap="handleGetOpenId">获取openId</button>

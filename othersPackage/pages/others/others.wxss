@@ -1,4 +1,4 @@
 /* others/others.wxss */
 /* 引入模板的样式 */
 /* 模板样式会覆盖 */
-@import '/myTemplate/myTemplate.wxss'
+@import '../../../myTemplate/myTemplate.wxss'

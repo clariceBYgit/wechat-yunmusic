@@ -1,10 +1,7 @@
 {
     "pages": [
-        "others/others",
         "pages/index/index",
         "pages/search/search",
-        "pages/recommendSong/recommendSong",
-        "pages/songDetail/songDetail",
         "pages/video/video",
         "pages/personal/personal",
         "pages/login/login"
@@ -43,5 +40,27 @@
     },
     "requiredBackgroundModes": [
         "audio"
-    ]
+    ],
+    "subPackages": [
+        {
+            "root": "songPackage",
+            "pages":[
+                "pages/recommendSong/recommendSong",
+                "pages/songDetail/songDetail"
+            ],
+            "independent":true
+        },
+        {
+            "root": "othersPackage",
+            "name": "myOthers",
+            "pages": [
+                "pages/others/others"
+            ]
+        }
+    ],
+    "preloadRule": {
+        "pages/index/index": {
+          "packages": ["myOthers","songPackage"]
+        }
+    }
 }

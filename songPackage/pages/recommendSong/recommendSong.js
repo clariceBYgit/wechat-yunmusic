@@ -1,6 +1,6 @@
 // pages/recommendSong/recommedSong.js
 import PubSub from 'pubsub-js'
-import requset from '../../utils/request'
+import requset from '../../../utils/request'
 Page({
 
     /**
@@ -72,12 +72,12 @@ Page({
     toSongDetail(e){
         let {song, index } = e.currentTarget.dataset;
         this.setData({index})
-        console.log(song)
+        // console.log(song)
         // 不能直接将song对象作为参数
         wx.navigateTo({
             // 不能直接将song对象作为参数传递，长度过长，会被自动截取掉
             // url: '/pages/songDetail/songDetail?songPackage=' + JSON.stringify(songPackage)
-            url: '/pages/songDetail/songDetail?musicId=' + song.id
+            url: '../songDetail/songDetail?musicId=' + song.id
           })
     },
     /**

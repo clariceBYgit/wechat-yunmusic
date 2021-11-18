@@ -77,7 +77,13 @@ Page({
         // 但是不能跳到 tabbar 页面。使用 wx.navigateBack 可以返回到原页面。
         // 小程序中页面栈最多十层
         wx.navigateTo({
-            url:'/pages/recommendSong/recommendSong'
+            url:'/songPackage/pages/recommendSong/recommendSong'
+        })
+    },
+    // 点击跳转至others页面
+    toOthers(){
+        wx.navigateTo({
+            url:'/othersPackage/pages/others/others'
         })
     }
 })

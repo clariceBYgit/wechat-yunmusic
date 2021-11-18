@@ -1,8 +1,8 @@
 // pages/songDetail/songDetail.js
 
-import PubSub, { publish } from 'pubsub-js';
+import PubSub from 'pubsub-js';
 import moment from 'moment';
-import requset from '../../utils/request';
+import requset from '../../../utils/request';
 // 获取全局实例
 const appInstance = getApp();
 Page({
