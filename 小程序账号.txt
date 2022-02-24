@@ -1,6 +1,4 @@
-wxa514d9a0a92b543c    appID
 
-1ca3f82badf727907a0aaf13ca9fb3e1   appSecret 小程序密钥
 
 
 
